@@ -6,6 +6,11 @@
             margin-right: 0px;
         }
     </style>
+    <style type="text/css">
+        .auto-style1 {
+            height: 31px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
@@ -19,13 +24,13 @@
                     <td></td>
                 </tr>
                  <tr>
-                    <td>
+                    <td class="auto-style1">
                         <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
                      </td>
-                    <td>
+                    <td class="auto-style1">
                         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                      </td>
-                    <td>
+                    <td class="auto-style1">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please specify a valid password"></asp:RequiredFieldValidator>
                      </td>
                 </tr>
@@ -44,7 +49,7 @@
                  <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
                      </td>
                     <td></td>
                 </tr>

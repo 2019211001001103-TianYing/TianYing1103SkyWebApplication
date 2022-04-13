@@ -9,9 +9,9 @@ namespace TianYing1103SkyWebApplication
 {
     public partial class Logoff : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        private void Page_Load(object sender, EventArgs e)
         {
-
+            Session.RemoveAll();
         }
     }
 }

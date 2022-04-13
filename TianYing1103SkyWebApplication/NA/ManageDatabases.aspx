@@ -33,14 +33,15 @@
                    
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td colspan="2">
+                        <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td colspan="3">
-                        <asp:Button ID="Button1" runat="server" Text="Archive information perraining to flights that have departed." />
+                        <asp:Button ID="Button1" runat="server" Text="Archive information perraining to flights that have departed." OnClick="Button1_Click" />
                     </td>
                 
                 </tr>
@@ -52,7 +53,7 @@
                 </tr>
                  <tr>
                     <td colspan="3">
-                        <asp:Button ID="Button2" runat="server" Text="Update Customer information for the frequent flires program." />
+                        <asp:Button ID="Button2" runat="server" Text="Update Customer information for the frequent flires program." OnClick="Button2_Click" />
                      </td>
                  
                 </tr>
