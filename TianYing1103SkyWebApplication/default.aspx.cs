@@ -35,7 +35,7 @@ namespace TianYing1103SkyWebApplication
 
                 if (ds1.Tables["dtUsers"].Rows.Count == 0)
                 {
-                    lalMessage.Text = "Invalid Username";
+                    lblMessage.Text = "Invalid Username";
                 }
                 else
                 {
@@ -47,7 +47,7 @@ namespace TianYing1103SkyWebApplication
                     Session["usrRole"] = Role;
                     if (Role == "Disabled")
                     {
-                        lalMessage.Text = "Your account has been disabled.Please contact the network Administrator";
+                        lblMessage.Text = "Your account has been disabled.Please contact the network Administrator";
                         return;
                     }
                     switch (Role)
@@ -65,7 +65,7 @@ namespace TianYing1103SkyWebApplication
                 }
                 else
                 {
-                            lalMessage.Text = "Invalid password";
+                            lblMessage.Text = "Invalid password";
                  }
             }
              conn.Close();

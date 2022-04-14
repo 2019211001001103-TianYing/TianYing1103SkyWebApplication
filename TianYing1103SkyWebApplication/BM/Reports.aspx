@@ -42,7 +42,7 @@
                         <asp:Label ID="Label2" runat="server" Text="Generate a Flight usage report for all flights flown by airline"></asp:Label>
                      </td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Generate" BackColor="Silver" BorderColor="Blue" />
+                        <asp:Button ID="Button1" runat="server" Text="Generate Flight Usage Report" BackColor="Silver" BorderColor="Blue" OnClick="Button1_Click" />
                      </td>
                     <td></td>
                 </tr>
@@ -51,7 +51,7 @@
                         <asp:Label ID="Label3" runat="server" Text="Generate a customer affinity report for top 100 customers"></asp:Label>
                      </td>
                     <td>
-                        <asp:Button ID="Button2" runat="server" Text="Generate" BackColor="Silver" BorderColor="Blue" />
+                        <asp:Button ID="Button2" runat="server" Text="Generate customer Affinity Report" BackColor="Silver" BorderColor="Blue" OnClick="Button2_Click" />
                      </td>
                     <td></td>
                 </tr>
@@ -84,7 +84,7 @@
                         </asp:ListBox>
                      </td>
                     <td>
-                        <asp:Button ID="Button3" runat="server" Text="Generate" BackColor="Silver" BorderColor="Blue" />
+                        <asp:Button ID="Button3" runat="server" Text="Generate Revenue Report" BackColor="Silver" BorderColor="Blue" OnClick="Button3_Click" />
                      </td>
                     <td></td>
                 </tr>
@@ -95,7 +95,7 @@
                 </tr>
                  <tr>
                     <td colspan="3">
-                        <asp:GridView ID="GridView1" runat="server">
+                        <asp:GridView ID="DataGrid1" runat="server">
                         </asp:GridView>
                      </td>
                 </tr>

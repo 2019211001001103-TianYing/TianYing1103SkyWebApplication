@@ -38,13 +38,23 @@
                     <td>
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ChangePassword.aspx">Change password</asp:HyperLink>
                      </td>
+
                     <td>
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Logoff.aspx">Logoff</asp:HyperLink>
                      </td>
                 </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
                  <tr>
                     <td>
-                        <asp:Label ID="Label2" runat="server" Text="Flight Number"></asp:Label>
+                       
+                        <asp:Label ID="Label12" runat="server" Text="Flight Number"></asp:Label>
+                       
                      </td>
                     <td>
                         <asp:TextBox ID="txtFlightNumber" runat="server"></asp:TextBox>
@@ -58,7 +68,7 @@
                         <asp:Label ID="Label3" runat="server" Text="Departure Time"></asp:Label>
                      </td>
                     <td class="auto-style1">
-                        <asp:TextBox ID="txtDepartureTime" runat="server"></asp:TextBox>
+                        <asp:Calendar ID="calDepartureTime" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Double" BorderWidth="2px" DayNameFormat="FirstTwoLetters"></asp:Calendar>
                      </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Departure Time Required" ControlToValidate="txtDepartureTime"></asp:RequiredFieldValidator>
@@ -79,7 +89,7 @@
                         <asp:Label ID="Label5" runat="server" Text="Arrival Time"></asp:Label>
                      </td>
                     <td>
-                        <asp:TextBox ID="txtArrivalTime" runat="server"></asp:TextBox>
+                        <asp:Calendar ID="calArrivalTime" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Double" BorderWidth="2px" DayNameFormat="FirstTwoLetters"></asp:Calendar>
                      </td>
                     <td><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Arrival Time Required" ControlToValidate="txtArrivalTime"></asp:RequiredFieldValidator></td>
                 </tr>
@@ -140,8 +150,8 @@
                  <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Submit" />
-                        &nbsp;&nbsp; <asp:Button ID="Button2" runat="server" Text="Cancle" />
+                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
+                        &nbsp;&nbsp; <asp:Button ID="btnCancle" runat="server" Text="Cancle" OnClick="btnCancle_Click" />
                      </td>
                     <td></td>
                 </tr>

@@ -34,7 +34,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
                     </td>
                     <td></td>
                     <td></td>
