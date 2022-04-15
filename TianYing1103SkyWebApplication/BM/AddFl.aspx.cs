@@ -44,10 +44,10 @@ namespace TianYing1103SkyWebApplication.BM
             String DepDateTime, ArrDateTime;
             try
             {
-                deptime=Convert.ToDateTime(calDepartureTime.Text).TimeOfDay;
-                arrtime = Convert.ToDateTime(calArrivalTime.Text).Time0fDay;
-                DepDateTime = calDepartureTime.SelectedDate.ToShortDateStringO + "" + deptime.ToStringO;
-                ArrDateTime = calArrivalTime.SelectedDate.ToShortDateStringO+"" + arrtime.ToStringO;
+                deptime=Convert.ToDateTime(txtDepartureTime.Text.Trim()).TimeOfDay;
+                arrtime = Convert.ToDateTime(txtArrivalTime.Text.Trim()).TimeOfDay;
+                DepDateTime = calDepartureTime.SelectedDate.ToShortDateString() + "" + deptime.ToString();
+                ArrDateTime = calArrivalTime.SelectedDate.ToShortDateString()+"" + arrtime.ToString();
                 
                 if (deptime >= arrtime)
                 {

@@ -68,8 +68,8 @@
                         <asp:Label ID="Label3" runat="server" Text="Departure Time"></asp:Label>
                      </td>
                     <td class="auto-style1">
-                        <asp:Calendar ID="calDepartureTime" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Double" BorderWidth="2px" DayNameFormat="FirstTwoLetters"></asp:Calendar>
-                     </td>
+                        <asp:Calendar ID="calDepartureTime" runat="server"></asp:Calendar><asp:TextBox ID="txtDepartureTime" runat="server"></asp:TextBox>
+                        (HH:MM)</td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Departure Time Required" ControlToValidate="txtDepartureTime"></asp:RequiredFieldValidator>
                     </td>
@@ -89,8 +89,9 @@
                         <asp:Label ID="Label5" runat="server" Text="Arrival Time"></asp:Label>
                      </td>
                     <td>
-                        <asp:Calendar ID="calArrivalTime" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Double" BorderWidth="2px" DayNameFormat="FirstTwoLetters"></asp:Calendar>
-                     </td>
+                        
+                        <asp:Calendar ID="calArrivalTime" runat="server"></asp:Calendar><asp:TextBox ID="txtArrivalTime" runat="server"></asp:TextBox>
+                        (HH:MM)</td>
                     <td><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Arrival Time Required" ControlToValidate="txtArrivalTime"></asp:RequiredFieldValidator></td>
                 </tr>
                  <tr>

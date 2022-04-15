@@ -114,6 +114,15 @@ namespace TianYing1103SkyWebApplication.BM
         protected global::System.Web.UI.WebControls.Calendar calDepartureTime;
 
         /// <summary>
+        /// txtDepartureTime 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDepartureTime;
+
+        /// <summary>
         /// RequiredFieldValidator2 控件。
         /// </summary>
         /// <remarks>
@@ -166,6 +175,15 @@ namespace TianYing1103SkyWebApplication.BM
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar calArrivalTime;
+
+        /// <summary>
+        /// txtArrivalTime 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtArrivalTime;
 
         /// <summary>
         /// RequiredFieldValidator4 控件。
