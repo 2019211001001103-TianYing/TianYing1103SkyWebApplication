@@ -35,7 +35,7 @@
                 </tr>
                
                 </table>
-             <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="0">
+             <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="0" OnFinishButtonClick="Wizard1_FinishButtonClick" OnNextButtonClick="Wizard1_NextButtonClick">
                  <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Left" />
                  <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
                  <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
@@ -50,6 +50,9 @@
                                      <asp:Label ID="Label2" runat="server" Text="Step1:Specify Ticket Details" BorderStyle="None"></asp:Label></td>
                                  <td></td>
                              </tr>
+                             <tr><td colspan="3">
+                                  <asp:Label ID="lblMessageStep1" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+                                 </td></tr>
                              <tr>
                                  <td>
                                      <asp:Label ID="Label3" runat="server" Text="Flight Number"></asp:Label></td>

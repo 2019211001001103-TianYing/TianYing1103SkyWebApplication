@@ -35,7 +35,7 @@
                 </tr>
                
                 </table>
-             <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="1">
+             <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="0">
                  <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Left" />
                  <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
                  <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
@@ -51,6 +51,9 @@
                                  <td></td>
                                  <td></td>
                              </tr>
+                             <tr><td colspan="2">
+                                  <asp:Label ID="lblMessage" runat="server" Font-Bold="False" ForeColor="Red"></asp:Label>
+                                 </td></tr>
                              <tr>
                                  <td>
                                      <asp:Label ID="Label3" runat="server" Text="Flight Number"></asp:Label></td>
@@ -72,15 +75,15 @@
                                  <td>
                                      <asp:Label ID="Label5" runat="server" Text="Date"></asp:Label></td>
                                  <td>
-                                     <asp:Calendar ID="calDepDate" runat="server"></asp:Calendar>
+                                     <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
                                  </td>
                                  <td></td>
                              </tr>
                              <tr>
                                  <td></td>
-                                 <td></td>
+                                 <td><asp:Button ID="btnSubmit" runat="server" Text="Submit" /></td>
                                  <td>
-                                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" /></td>
+                                     </td>
                              </tr>
                          </table>
                      </asp:WizardStep>
