@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="CreateRes.aspx.cs" Inherits="TianYing1103SkyWebApplication.LOB.CreateRes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Business Executive
+    <style type="text/css">
+        .auto-style1 {
+            height: 22px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
@@ -66,8 +71,8 @@
                                      <asp:Label ID="Label4" runat="server" Text="Class"></asp:Label></td>
                                  <td>
                                      <asp:ListBox ID="lstClass" runat="server">
-                                         <asp:ListItem>Executive</asp:ListItem>
-                                         <asp:ListItem>Business</asp:ListItem>
+                                         <asp:ListItem Value="Exec">Executive</asp:ListItem>
+                                         <asp:ListItem Value="Busi">Business</asp:ListItem>
                                      </asp:ListBox></td>
                                  <td></td>
                                  <td></td>
@@ -76,7 +81,7 @@
                                  <td>
                                      <asp:Label ID="Label5" runat="server" Text="Date"></asp:Label></td>
                                  <td>
-                                     <asp:Calendar ID="Cal1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Double" BorderWidth="2px" DayNameFormat="FirstTwoLetters"></asp:Calendar>
+                                     <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Double" BorderWidth="2px" DayNameFormat="FirstTwoLetters"></asp:Calendar>
                                  </td>
                                  <td></td>
                                  <td></td>
@@ -142,7 +147,7 @@
                              </tr>
                          </table>
                      </asp:WizardStep>
-                     <asp:WizardStep runat="server" Title="Make Reservation">
+                     <asp:WizardStep ID="WizardStep3" runat="server" Title="Make Reservation">
                          <!-- 3 -->
                          <table>
                              <tr>
@@ -150,6 +155,9 @@
                                      <asp:Label ID="Label13" runat="server" Text="Step3:Confirm Booking"></asp:Label></td>
                                 
                              </tr>
+                              <tr><td colspan="3">
+                                  <asp:Label ID="lblMessageStep3" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+                                 </td></tr>
                              <tr>
                                  <td>
                                      <asp:Label ID="Label14" runat="server" Text="Name"></asp:Label></td>
@@ -167,12 +175,12 @@
                                  <td></td>
                              </tr>
                              <tr>
-                                 <td></td>
-                                 <td>
-                                     <asp:Button ID="btnCreate" runat="server" Text="Create" BackColor="Silver" BorderColor="Blue" Width="100px" /><asp:Button ID="btnCancle" runat="server" Text="Cancle" BackColor="Silver" BorderColor="Blue" Width="100px" /></td>
-                                 <td>
+                                 <td class="auto-style1"></td>
+                                 <td class="auto-style1">
                                      </td>
-                                 <td></td>
+                                 <td class="auto-style1">
+                                     </td>
+                                 <td class="auto-style1"></td>
                              </tr>
                          </table>
                      </asp:WizardStep>

@@ -80,5 +80,74 @@ namespace TianYing1103SkyWebApplication.LOB
                 }
             }
         }
+
+        protected void btnTStatSubmit_Click(object sender, EventArgs e)
+        {
+
+            lblTicketStatus.Text = "";
+            if (txtTNo.Text == "" || txtTNo.Text == null)
+            {
+                lblTicketStatus.Text = "Invalid Ticket number";
+                return;
+            }
+            else
+            {
+                String ConnectionString = ConfigurationManager.ConnectionStrings["ARPDatabaseConnectionString"].ConnectionString;
+                SqlConnection conn = new SqlConnection(ConnectionString);
+                conn.Open();
+                string selectSql = "SELECT TicketConfirmed FROM dtReservations where TicketNo=@TicketNo";
+
+                SqlCommand cmd = new SqlCommand(selectSql, conn);
+                cmd.Parameters.AddWithValue("@TicketNo", txtTNo.Text.Trim());
+
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                DataSet dataSet = new DataSet();
+                adapter.Fill(dataSet, "TicketStatus");
+                conn.Close();
+                if (dataSet.Tables["TicketStatus"].Rows.Count == 0)
+                {
+                    conn.Open();
+                    string selectSql2 = "SELECT TicketNo FROM dtCancellations where TicketNo=@TicketNo";
+
+                    SqlCommand cmd2 = new SqlCommand(selectSql2, conn);
+                    cmd2.Parameters.AddWithValue("@TicketNo", txtTNo.Text.Trim());
+
+
+                    SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
+
+                    DataSet dataSet2 = new DataSet();
+                    adapter2.Fill(dataSet2, "TicketCancellationsStatus");
+                    conn.Close();
+                    if (dataSet2.Tables["TicketCancellationsStatus"].Rows.Count > 0)
+                    {
+                        lblTicketStatus.Text = "Ticket has Cancelled";
+                    }
+                    else
+                    {
+                        lblTicketStatus.Text = "Invalid Ticket Number";
+                    }
+
+
+                }
+                else
+                {
+                    String strStatus = "";
+
+                    strStatus = dataSet.Tables["TicketStatus"].Rows[0][0].ToString();
+
+                    if (strStatus == "True")
+                    {
+                        lblTicketStatus.Text = "Status: Ticket is Confirmed";
+                    }
+                    else
+                    {
+                        lblTicketStatus.Text = "Status: Ticket Not Confirmed";
+                    }
+                }
+
+            }
+        }
     }
 }
